@@ -1,4 +1,8 @@
- // Create a variable for our score
+
+
+
+
+// Create a variable for our score
  let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
@@ -82,3 +86,15 @@ function resetScore() {
 
   localStorage.setItem('score', JSON.stringify(score));
 }
+
+// Adding event listeners
+document.body.addEventListener('keydown',(event) => {
+  if (event.key === 'r'){
+    playGame('rock');
+  } else if (event.key=== 'p'){
+    playGame('paper');
+  } else if (event.key==='s'){
+    playGame('scissors');
+  }
+})
+// End of event listener
