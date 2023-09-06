@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rock Paper Scissors</title>
+
+  <!-- Link to the CSS -->
+  <link rel="stylesheet" href="rock-paper-scissors.css">  
+
+</head>
+<body>
+  <div class="container container_game">
+    <p class="title">Rock Paper and Scissors Game</p>
+
+    <!-- Buttons Rock Paper and scissors-->
+    <button onclick="playGame('rock')" class="move-button">
+      <img src="pictures/rock-emoji.png" class="move-icon" >
+    </button>
+  
+    <button onclick="playGame('paper')" class="move-button">
+      <img src="pictures/paper-emoji.png" alt="" class="move-icon" >
+    </button>
+  
+    <button onclick="playGame('scissors')" class="move-button">
+      <img src="pictures/scissors-emoji.png" alt="" class="move-icon" >
+    </button>
+    <!-- End of Rock paper and scissors button -->
+    
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+  
+    <!-- Reset score -->
+    <button onclick="resetScore(); localStorage.removeItem('score'); updateScoreElement();" class="reset-score-button">Reset Score</button>
+  
+       <!-- Autoplay button -->
+       <button class="auto-play-button" onclick="
+       autoPlay();
+      "> Auto play  </button>
+     
+      <!-- end of autoplay button -->
+
+  </div>
+
+      
+  <script src="rock-paper-scissors.js">
+   
+  </script>
+</body>
+</html>

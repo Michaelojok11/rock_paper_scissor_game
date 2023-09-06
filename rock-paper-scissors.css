@@ -1,10 +1,18 @@
 
   /* Rock paper and scissors */
-  body{
+
+  html, body {
+    height: 100%;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color:rgb(25, 25, 25);
     color: white;
-    font-family: Arial;                
+    font-family: Arial;  
   }
+
 
   .title {
     font-size: 30px;
